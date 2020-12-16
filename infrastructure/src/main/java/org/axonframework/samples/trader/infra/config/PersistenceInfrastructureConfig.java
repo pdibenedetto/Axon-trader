@@ -30,7 +30,6 @@ public class PersistenceInfrastructureConfig {
     public EmbeddedDatabaseFactoryBean dataSource() {
         EmbeddedDatabaseFactoryBean embeddedDatabaseFactoryBean = new EmbeddedDatabaseFactoryBean();
         embeddedDatabaseFactoryBean.setDatabaseType(EmbeddedDatabaseType.HSQL);
-
         return embeddedDatabaseFactoryBean;
     }
 }

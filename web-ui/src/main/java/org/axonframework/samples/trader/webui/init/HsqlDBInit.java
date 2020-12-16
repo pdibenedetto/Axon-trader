@@ -77,6 +77,9 @@ public class HsqlDBInit extends BaseDBInit {
         try {
             Connection connection = dataSource.getConnection();
 
+            logger.info("SCHEMA {}", connection.getSchema());
+            logger.info("SCHEMA {}", connection.toString());
+
             sql_dropDomainEventEntryTable(connection).execute();
             sql_dropSnapshotEventEntryTable(connection).execute();
             sql_dropTableAssocValueEntry(connection).execute();
